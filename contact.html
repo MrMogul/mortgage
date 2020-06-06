@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Raleway:400,700" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width"> <!--Chrome DevTools wasn't working without this, but when I use it without DevTools, my media queries don't work...WTF? -->
+ <link href="./resources/css/reset.css" type="text/css" rel="stylesheet" />
+ <link href="./resources/css/style.css" type="text/css" rel="stylesheet" />
+ <title>Mogul Mortgages</title>
+</head>
+  <body>
+    <header>
+
+      <div class="navbar container"> <!-- Navbar Container -->
+        <nav>
+          <div class="logo">
+            <img src="./resources/images/132.jpg" alt="Company Logo">
+            <span class="Mogul">MOGUL</span><span class="mortgages">MORTGAGES</span>
+          </div>
+          <div class="call-us">
+            <h3>Speak Live</h3>
+            <h3>Call Us @ (510)-621-3953</h3>
+          </div>
+          <div class="links">
+            <ul>
+              <li><a href="#">Apply Now</a></li>
+              <li><a href="./resources.html">Resources</a>
+                <ul>
+                  <li><a href="./process.html">Loan Process</a></li>
+                  <li><a href="./programs.html">Loan Programs</a></li>
+                  <li><a href="./calculator.html">Mortgage Calculator</a></li>
+                </ul>
+              </li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+
+
+      <div class="banner container">  <!-- Banner Container -->
+        <div class="contact-form">
+          <h1>Contact Us</h1>
+          <form>
+            <label for="firstname">First</label>
+            <input type="text" id="firstname"name="fname"  placeholder="First Name" required autocomplete="given-name">
+
+            <label for="lastname">Last</label>
+            <input type="text" id="lastname" name="lname" placeholder="Last Name" required autocomplete="family-name">
+
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="name@example.com" required autocomplete="email">
+
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="Phone Number">
+
+            <label for="message">Message</label>
+            <textarea id="message"></textarea>
+
+            <button type="submit" name="submit">Send Message</button>
+          </form>
+
+        </div>
+      </div>  <!-- End Banner container -->
+
+    </header>
+
+      <footer> <!-- Footer -->
+        <div class="footer-left">
+          <div class="copyright">
+      		  <h6>&copy2019 Mogul Mortgages. All rights reserved</h6>
+      	  </div>
+          <div class="nmls">
+            <h6>NMLS #1748679</h6>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a href="http://www.facebook.com/" class="fa fa-facebook fa-lg"></a>
+          <a href="http://www.twitter.com/" class="fa fa-twitter fa-lg"></a>
+          <a href="http://www.instagram.com/" class="fa fa-instagram fa-lg"></a>
+        </div>
+      	<div class="footer-links">
+          <a href="./disclaimer.html" alt="disclaimer">Disclaimer</a>
+      		<a href="./terms.html" alt="Terms">Terms</a>
+      		<a href="./privacy.html" alt="Privacy">Privacy</a>
+          <a href="./partners.html" alt="Partners">Partners</a>
+      	</div>
+      </footer> <!-- End Footer -->
+  </body>
+</html>

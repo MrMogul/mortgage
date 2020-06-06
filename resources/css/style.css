@@ -13,6 +13,65 @@ header{
 
 }
 
+/** Contact Form Styling**/
+.contact-form{
+  width: 45rem;
+  margin: auto;
+  padding: 1rem;
+  background-color: #1d1d24;
+  border-radius: 5px;
+}
+
+form{
+  font-family: sans-serif;
+  max-width: 100%;
+  text-align: left;
+
+}
+
+.contact-form h1{
+  color: white;
+}
+
+label{
+  display: block;
+  padding: 0.5rem 0;
+  font-weight: bold;
+  color: #2999c2;
+}
+
+
+input,textarea{
+  width: 95%;
+  resize: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+input:hover, textarea:hover{
+
+}
+
+textarea{
+  height: 6rem;
+}
+.contact-form button{
+  background-color: blue;
+  padding: .5rem;
+  color: white;
+  margin: .5rem 0;
+  width: auto;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s background-color ease;
+  align-self: center;
+}
+
+.contact-form button:hover{
+  background-color: #b5240b;
+}
+
+
 /** Typeface Styling **/
 h1{
   color: black;
