@@ -261,7 +261,12 @@ nav .links{
 	color: #3399cc;
 }
 
-
+.calc{
+  display: flex;
+  width: 85%;
+  align-self: center;
+  border: 1px solid black;
+}
 
 
 

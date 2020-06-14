@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="../resources/css/calc.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" language="JavaScript" src="./amortize.js"></script>
+    <title>Mortgage Amortization Calculator</title>
+
+  </head>
+  <body>
+    <div class="container">
+      <h2>Mortgage Amortization Calculator</h2>
+      <div class="loan">
+        <div class="loan_source">
+          <form name="loan_form">
+            <table border= 1px solid black cellspacing="2" width="100%">
+              <tr>&nbsp;</tr>
+              <tr>
+                <td align="center" colspan="2">Enter Loan Information</td>
+              </tr>
+              <tr>
+                <td>Loan Amount</td>
+                <td>
+                  <input NAME="loan_amt" type="text" SIZE="10" MAXLENGTH="10" value="" align="middle" tabindex="1" />
+                </td>
+              </tr>
+              <tr>
+                <td>Interest Rate<br/><span style="font-size:80%">(ex. 4.5% = 4.5)</span></td>
+                <td>
+                  <input NAME="rate" type="text" SIZE="10" MAXLENGTH="10" value="" align="middle" tabindex="2" />
+                </td>
+              </tr>
+              <tr>
+                <td>Loan Term or Period Remaining in Existing Loan in Months</td>
+                <td>
+                  <input NAME="months" type="text" SIZE="10" MAXLENGTH="10" value="" align="middle" tabindex="3" />
+                </td>
+              </tr>
+              <tr>
+                <td>Additional Payment Amount</td>
+                <td>
+                  <input NAME="extra" type="text" SIZE="10" MAXLENGTH="10" value="0" align="middle" tabindex="4" />
+                </td>
+              </tr>
+            </table>
+          </form>
+            <table border="0" cellpadding="0" bordercolor="ff0000" cellspacing="5" >
+              <tr>
+                <td >
+                  <INPUT VALUE="Display Loan Schedule" TYPE="button" onclick="validate()"/>
+                  </td>
+                  <td >
+                    <input value="Clear Loan Info" type="button" onclick="clearLoanOnClick()"/>
+                  </td>
+                  <td>
+                    <input value="Clear Additional Payments" type="button" onclick="clearExtraOnClick()"/>
+                  </td>
+                  <TR>&nbsp;</TR>
+                </table>
+
+      </div>
+      <div class="loan_details">
+        <table border="1" width="100%">
+          <tr>&nbsp;</tr>
+          <tr>
+            <td colspan="2" align="center">Basic Loan Information</td>
+          </tr>
+          <tr>
+            <td maxlength="10" size="10" width="65%">Loan Amount:</td>
+            <td id="amount" maxlength="10" size="10" align="right" width="35%"></td>
+          </tr>
+          <tr>
+            <td maxlength="10" size="10" width="65%">Interest Rate:</td>
+            <td id="rate" maxlength="10" size="10" align="right" width="35%"></td>
+          </tr>
+          <tr>
+            <td maxlength="10" size="10" width="65%">Loan Term in Months :</td>
+            <td id="mos" maxlength="10" size="10" align="right" width="35%"></td>
+          </tr>
+          <tr>
+            <td maxlength="10" size="10" width="65%">Monthly Payment :</td>
+            <td id="fixed" size="10" maxlength="10" align="right" width="35%"></td>
+          </tr>
+          <tr>
+            <td maxlength="10" size="10" width="65%">Total Interest Paid :</td>
+            <td id="total_interest_paid" size="10" maxlength="10" align="right" width="35%"></td>
+          </tr>
+          <tr>
+            <td maxlength="10" size="10" width="65%">Total Payment :</td>
+            <td id="total_payment" size="10" maxlength="10" align="right" width="35%"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+      <div class="table header">
+        <table cellpadding="15" border="1">
+          <tr>
+            <td width="30" align="center"><b>Pmt</b></td>
+            <td width="60" align="center"><b>Payment</b></td>
+            <td width="60" align="center"><b>Principal</b></td>
+            <td width="60" align="center"><b>Interest</b></td>
+            <td width="85" align="center"><b>Interest Paid</b></td>
+            <td width="70" align="center"><b>Balance</b></td>
+          </tr>
+        </table>
+
+
+
+      </div>
+      <div id="table">
+
+      </div>
+
+    </div> <!-- End Container -->
+  </body>
+</html>
+<!-- balance = balance - ((monthlypayment - interestpayment) + additional);     or balance -= ((monthlypayment - interestpayment) + additional);
+loop based on frequency of additional payment
+start loop based on WHEN additionals begin
