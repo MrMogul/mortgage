@@ -61,8 +61,8 @@ function calculate(loan_amt,rate,months,extra){
   var towards_int=0;
   var total_int = 0;
   var monthly_payment = loan_amt * (period_int* (Math.pow(1 + period_int, months)))/((Math.pow(1 + period_int, months)) - 1);
+  monthly_payment = monthly_payment + extra;
   var fixed_payment = round(monthly_payment);
-  var monthly_pmt= fixed_payment + extra;
 
   var current_balance = loan_amt;
   var payment_counter = 1;
@@ -70,7 +70,7 @@ function calculate(loan_amt,rate,months,extra){
 
   // Create Table for 0 Month
   var table ="";
-  table += "<table cellpadding='15' border='1'>";
+  table += "<table cellpadding='15' border='1'> ";
     table += "<tr>";
       table += "<td width='30'>0</td>";
       table += "<td width='60'>&nbsp;</td>";
@@ -82,13 +82,13 @@ function calculate(loan_amt,rate,months,extra){
 
   while (current_balance > 0){
     towards_int =round( (period_int * current_balance) );
-    principal = round( (fixed_payment - towards_int) );
-    var towards_balance = principal + extra;
+    principal = round( (monthly_payment - towards_int) );
+    var towards_balance = principal;
     current_balance = current_balance - (towards_balance);
     total_int += round(towards_int);
 
     if (towards_balance > current_balance){
-			towards_balance = round(current_balance + towards_int);
+			towards_balance = current_balance + towards_int;
 		}
 
 
