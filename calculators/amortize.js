@@ -81,12 +81,12 @@ function calculate(loan_amt,rate,months,extra){
   var table ="";
   table += "<table cellpadding='15' border='1'> ";
     table += "<tr>";
-      table += "<td width='30'>0</td>";
-      table += "<td width='60'>&nbsp;</td>";
-      table += "<td width='60'>&nbsp;</td>";
-      table += "<td width='60'>&nbsp;</td>";
-      table += "<td width='85'>&nbsp;</td>";
-      table += "<td width='70'>"+ loan_amt + "</td>";
+      table += "<td width='30' align='center'>0</td>";
+      table += "<td width='60' align='center'>&nbsp;</td>";
+      table += "<td width='60' align='center'>&nbsp;</td>";
+      table += "<td width='60' align='center'>&nbsp;</td>";
+      table += "<td width='85' align='center'>&nbsp;</td>";
+      table += "<td width='70' align='center'>"+ loan_amt + "</td>";
     table += "</tr>";
 
   while (current_balance > 0){
