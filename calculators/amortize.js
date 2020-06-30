@@ -128,12 +128,12 @@ function calculate(loan_amt,rate,months,extra){
 
     // Start rows for amortization table
     table += "<tr>";
-      table += "<td width='30'>" + payment_counter + "</td>";
-      table += "<td width='60'>" + fixed_payment + "</td>";
-      table += "<td width='60'>" + round(towards_balance) + "</td>";
-      table += "<td width='60'>" + towards_int + "</td>";
-      table += "<td width='85'>" + round(total_int) + "</td>";
-      table += "<td width='70'>"+ round(current_balance) + "</td>";
+      table += "<td width='30' align='center'>" + payment_counter + "</td>";
+      table += "<td width='60' align='center'>" + fixed_payment + "</td>";
+      table += "<td width='60' align='center'>" + round(towards_balance) + "</td>";
+      table += "<td width='60' align='center'>" + towards_int + "</td>";
+      table += "<td width='85' align='center'>" + round(total_int) + "</td>";
+      table += "<td width='70' align='center'>"+ round(current_balance) + "</td>";
     table += "</tr>";
 
 
