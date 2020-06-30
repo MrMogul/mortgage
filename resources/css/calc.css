@@ -29,13 +29,13 @@ align: center;
   height: 50px;
 }
 
-#table{
+.table_info{
   width: 600px;
   height: 200px;
 
 }
 
-#table table{
+.table_info table{
   overflow: auto;
   font-family: sans-serif;
   font-size: 13px;

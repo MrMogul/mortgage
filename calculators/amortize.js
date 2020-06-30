@@ -68,6 +68,15 @@ function calculate(loan_amt,rate,months,extra){
   var payment_counter = 1;
 
 
+  var frequency2, frequency3, frequency4, frequency5 ="";
+  var add2, add3, add4, add5 = 0;
+  var add_count2, add_count3, add_count4, add_count5= 0;
+
+  var add1 = 100;
+  var add_count1=1;
+  var frequency1 = "Quarterly";
+
+
   // Create Table for 0 Month
   var table ="";
   table += "<table cellpadding='15' border='1'> ";
@@ -84,12 +93,37 @@ function calculate(loan_amt,rate,months,extra){
     towards_int =round( (period_int * current_balance) );
     principal = round( (monthly_payment - towards_int) );
     var towards_balance = principal;
-    current_balance = current_balance - (towards_balance);
-    total_int += round(towards_int);
 
     if (towards_balance > current_balance){
-			towards_balance = current_balance + towards_int;
+			towards_balance = current_balance;
 		}
+
+    if (add1 > 0 && add_count1 == payment_counter){
+
+      towards_balance = towards_balance + add1;
+
+      switch (frequency1) {
+        case "Monthly":
+          add_count1++;
+          break;
+        case "Quarterly":
+          add_count1 = add_count1 + 3;
+          break;
+        case "Semi-Annualy":
+          add_count1 = add_count1 + 6;
+          break;
+        case "Annualy":
+          add_count1 = add_count1 + 12;
+          break;
+        case "One Time":
+          add_count1 = add_count1 + 0;
+          break;
+
+      }
+    }
+
+    current_balance = current_balance - (towards_balance);
+    total_int += round(towards_int);
 
 
     // Start rows for amortization table
