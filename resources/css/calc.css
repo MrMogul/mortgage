@@ -26,27 +26,30 @@ h2{
 }
 
 .table_container{
-margin: .5rem auto;
+margin: 1rem auto;
 width: 50%;
+display: block;
 }
 
 .table_header{
-  clear: both;
   width: 600px;
   height: 50px;
 }
 
 .table_header table{
-  height: 100%;
-  width: auto;
+  max-height: 50px;
+  width: 600px;
+
 }
 .table_info{
+  display: block;
   width: 600px;
   height: 200px;
   overflow: auto;
 }
 
 .table_info table{
+  border-top: none;
   font-family: sans-serif;
   font-size: 13px;
   text-align: center;
